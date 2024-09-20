@@ -1,0 +1,197 @@
+body {
+  
+    background-color: whitesmoke;
+}
+
+.btn{
+    background-color: orangered;
+    color: white;
+    border-radius: 0px 10px 10px 0px;
+}
+
+.btn:hover{
+    background-color: white;
+    color: orangered;
+    border: 1px solid orangered;
+}
+
+h2 {
+    color: orangered;
+    
+
+}
+
+ .alert-info {
+    background-color: rgb(255, 255, 255);
+    color: rgb(255, 94, 1);
+    border: 1px solid orangered;
+    border-radius: 23px;
+} 
+
+
+
+.wrap-delete * {
+    margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+  }
+  .button-delete {
+      -webkit-touch-callout: none;
+        -webkit-user-select: none;
+         -khtml-user-select: none;
+           -moz-user-select: none;
+            -ms-user-select: none;
+                user-select: none;
+            -webkit-tap-highlight-color: transparent;
+    }
+    
+    .wrap-delete button {
+        width: 150px;
+        height: 50px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        background: 
+  red;
+        border: none;
+        border-radius: 5px;
+        box-shadow: 1px 1px 3px 
+  rgba(0,0,0,0.15);
+        background: 
+  #e62222;
+    }
+    
+    .wrap-delete button, .wrap-delete button span {
+        transition: 200ms;
+    }
+    
+    .wrap-delete button .text {
+        transform: translateX(35px);
+        color: 
+  white;
+        font-weight: bold;
+    }
+    
+    .wrap-delete button .icon {
+        position: absolute;
+        border-left: 1px solid 
+  #c41b1b;
+        transform: translateX(110px);
+        height: 40px;
+        width: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .wrap-delete button svg {
+        width: 15px;
+        fill: 
+  #eee;
+    }
+    
+    .wrap-delete button:hover {
+        background: 
+  #ff3636;
+    }
+    
+    .wrap-delete button:hover .text {
+        color: 
+  transparent;
+    }
+    
+    .wrap-delete button:hover .icon {
+        width: 150px;
+        border-left: none;
+        transform: translateX(0);
+    }
+    
+    .wrap-delete button:focus {
+        outline: none;
+    }
+
+
+
+    /* 2nd button  */
+
+
+    .wrap-accept * {
+        margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+      }
+      .button-delete {
+          -webkit-touch-callout: none;
+            -webkit-user-select: none;
+             -khtml-user-select: none;
+               -moz-user-select: none;
+                -ms-user-select: none;
+                    user-select: none;
+                -webkit-tap-highlight-color: 
+      transparent;
+        }
+        
+        .wrap-accept button {
+            width: 150px;
+            height: 50px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            background: 
+    #00eb1f;
+            border: none;
+            border-radius: 5px;
+            box-shadow: 1px 1px 3px 
+      rgba(0,0,0,0.15);
+            background: 
+            #00eb1f;
+        }
+        
+        .wrap-accept button, .wrap-accept button span {
+            transition: 200ms;
+        }
+        
+        .wrap-accept button .text {
+            transform: translateX(35px);
+            color: 
+      white;
+            font-weight: bold;
+        }
+        
+        .wrap-accept button .icon {
+            position: absolute;
+            border-left: 1px solid 
+      #037e13;
+            transform: translateX(110px);
+            height: 40px;
+            width: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .wrap-accept button svg {
+            width: 15px;
+            fill: 
+      #eee;
+        }
+        
+        .wrap-accept button:hover {
+            background: 
+      #00eb1f;
+        }
+        
+        .wrap-accept button:hover .text {
+            color: 
+      transparent;
+        }
+        
+        .wrap-accept button:hover .icon {
+            width: 150px;
+            border-left: none;
+            transform: translateX(0);
+        }
+        
+        .wrap-accept button:focus {
+            outline: none;
+        }

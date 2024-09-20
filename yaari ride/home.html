@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yari Ride</title>
+    <link rel="shortcut icon" type="x-icon" style="width: 100%;" href="img/Screenshot 2024-08-07 114902.png">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/preloader.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- navbar -->
+    <style>
+        .navbar-brand {
+            color: black;
+
+        }
+
+        .nav-link active {
+            color: black;
+
+        }
+
+        .nav-link {
+            color: black;
+            font-weight: 500;
+
+        }
+
+        .nav-link:hover,
+        .nav-link.active {
+            color: black;
+        }
+
+        
+    </style>
+    <!-- feedback -->
+    <style>
+        .feedback-card {
+            background-color: white;
+            border-radius: 30px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .feedback-card:hover {
+            background-color: whitesmoke;
+
+            border-radius: 30px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .feedback-card img {
+            margin-right: 20px;
+        }
+
+        .feedback-card h4 {
+            color: orangered;
+            margin-bottom: 15px;
+        }
+
+        .feedback-card p {
+            font-size: 16px;
+            line-height: 1.5;
+            color: black;
+        }
+
+        .feedback-container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin: 0 -15px;
+        }
+
+        .feedback-container .col-sm-4 {
+            padding: 0 15px;
+            opacity: 0.9;
+        }
+    </style>
+</head>
+
+<body style="background-color:whitesmoke" class="no-scroll-y">
+    <!-- Preloader -->
+    <section>
+        <div id="preloader">
+            <div id="ctn-preloader" class="ctn-preloader">
+                <div class="animation-preloader">
+                    <div class="spinner"></div>
+                    <div class="txt-loading">
+                        <span data-text-preloader="L" class="letters-loading">
+                            L
+                        </span>
+
+                        <span data-text-preloader="O" class="letters-loading">
+                            O
+                        </span>
+
+                        <span data-text-preloader="A" class="letters-loading">
+                            A
+                        </span>
+
+                        <span data-text-preloader="D" class="letters-loading">
+                            D
+                        </span>
+
+                        <span data-text-preloader="I" class="letters-loading">
+                            I
+                        </span>
+
+                        <span data-text-preloader="N" class="letters-loading">
+                            N
+                        </span>
+
+                        <span data-text-preloader="G" class="letters-loading">
+                            G
+                        </span>
+                    </div>
+                </div>
+                <div class="loader-section section-left"></div>
+                <div class="loader-section section-right"></div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light text-center mb-5" style="background-color: whitesmoke;">
+        <div class="container-fluid">
+            <img src="img/logo re.png" height="100px" width="100px" style="margin-left: 10px;" alt="Logo">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-center align-content-center" id="navbarSupportedContent">
+                <ul class="navbar-nav mb-2 mb-lg-0 text-center">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="home.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Ride<i class="bi bi-chevron-down"></i>
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <!-- <li><a class="dropdown-item nav-link" href="loginform.html">Login Form</a></li> -->
+                            <li><a class="dropdown-item nav-link" href="ridesharing.html">Share Ride</a></li>
+                            <li><a class="dropdown-item nav-link" href="rideconfirmation.html">Confirm Ride</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Mechanic<i class="bi bi-chevron-down"></i>
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item nav-link" href="needMechanic.html">Need A Mechanic?</a></li>
+                            <li><a class="dropdown-item nav-link" href="MechanicConfirmation.html">Confirm Mechanic</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Help Center<i class="bi bi-chevron-down"></i>
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item nav-link" href="FAQs.html">Frequently Asked Questions</a></li>
+                            <li><a class="dropdown-item nav-link" href="contact.html">Contact Us</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+             <!-- Add Signup Button Here -->
+            <a href="loginform.html" style="color: orangered;font-size: 18px;text-decoration: none;font-weight: bold;">Sign In <i class="fa-solid fa-user" id="icon"></i></a>
+        </div>
+    </nav>
+    <!-- navbar -->
+
+
+
+    <!-- description  yaari ride -->
+    <div class="mt-5 mb-5" style=" margin:5px; margin-left: 25px;">
+        <h2 style="color:orangered;" class=" fw-bolder mb-4">Yaari Ride is your everyday, everything platform</h2>
+        <p><i><b>"From helping you reach anywhere in the city at the lowest rates in town to getting
+                    anyone anywhere in the city. Yaari Ride can do it all and more."</b></i></p>
+    </div>
+    <!-- description  yaari ride -->
+
+
+    <!-- nav&tab -->
+    <div class="container" style="background-color: white; padding-bottom: 50px; border-radius: 35px;padding-top: 1px;">
+        <div class="row">
+            <div class="col-md-12">
+                <ul class="nav nav-pills mb-3 justify-content-center mb-5 mt-5" id="pills-tab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill"
+                            data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home"
+                            aria-selected="true">Ride</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill"
+                            data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile"
+                            aria-selected="false">Mechanic</button>
+                    </li>
+                    <!-- <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact"
+                            type="button" role="tab" aria-controls="pills-contact" aria-selected="false"></button>
+                    </li> -->
+
+                </ul>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="tab-content" id="pills-tabContent">
+                    <div class="tab-pane fade show active" id="pills-home" role="tabpanel"
+                        aria-labelledby="pills-home-tab" tabindex="0" style="width: 100% !important;">
+                        <div class="row mx-0 px-0">
+                            <div class="col-md-6">
+                                <h3 style="color: orangered;">Ride</h3>
+                                <p>Yaari Ride offers rides on motorbikes, rickshaws, and cars at the lowest fares in
+                                    Karachi.
+                                    No matter what your destination is, Yaari Ride is always there for you. Let’s get
+                                    moving.
+                                </p>
+                                <a class=" btn-24  btn mb-5" href="ridesharing.html">Book A Ride</a>
+
+                            </div>
+
+                            <div class="col-md-6 ">
+                                <img src="img/ride.png" height="220px" width="100%" style="border-radius: 30px;">
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab"
+                        tabindex="0" style="width: 100% !important;">
+                        <div class="row mx-0 px-0 ">
+                            <div class="col-sm-6">
+                                <h3 style="color: orangered;">Mechanic</h3>
+                                <p>Mechanics play a crucial role in ensuring the reliability and safety of cars.
+                                    Their expertise typically covers diagnosing issues, conducting repairs,
+                                    and performing regular maintenance to ensure optimal functionality and safety
+                                </p>
+                                <a class=" btn-24  btn mb-5" href="needMechanic.html">Book A Mechanic</a>
+                            </div>
+
+                            <div class="col-sm-6  ">
+                                <img src="img/mechanis.jpg" height="220px" width="100%" style="border-radius: 30px;">
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab"
+                        tabindex="0">
+                        <div class="row mx-0 px-0 ">
+                            <div class="col-sm-6">
+                                <h3 style="color: orangered;">Ride</h3>
+                                <p>Yaari Ride offers rides on motorbikes, rickshaws, and cars at the lowest fares in Karachi.
+                                    No matter what your destination is, Yaari Ride is always there for you. Let’s get moving.
+                                </p>
+                                <a class=" btn btn-outline-warning mb-5" href="">Read More</a>
+                            </div>
+        
+                            <div class="col-sm-6  ">
+                                <img width="100px" src="img/comprehensive.png">
+                            </div>
+        
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- nav&tab -->
+
+    <!-- about us -->
+    <div style=" margin: 10px ;">
+        <h2 class="mt-4 fw-bolder" style="color:orangered; margin: 10px ;">About Yaari Ride</h2>
+        <img class="mb-4" style="border-radius: 35px;" src="img/about.jpg" height="400px" width="100%" alt="">
+        <p>Yaari Ride purpose is to simplify and improve the lives of people and build an
+            awesome organisation that inspires.
+            Learn more about our purpose, people and services.</p>
+        <a class="btn-24  btn" href="about.html">Read More</a>
+    </div>
+    <!-- about us -->
+
+    <!-- services -->
+    <div class="container mt-5 mb-5">
+        <div class="row mx-0 px-0">
+            <div class="col-md-6" data-aos="fade-right" data-aos="fade-down" data-aos-easing="linear"
+                data-aos-duration="1500">
+                <img src="img/safety.jpeg" alt="" height="250px" width="100%" style="border-radius: 30px;">
+            </div>
+
+            <div class="col-md-6 text-center" data-aos="fade-left" data-aos-easing="linear" data-aos-duration="1500">
+                <h2 style="color: orangered;">Safety</h2>
+                <p class="fw-bolder">Your safety is our priority</p>
+                <p>All of our partners hold a valid driver’s license, are tracked and undergo a thorough background
+                    check to guarantee your safety. Your trip is insured as a passenger and as a shipper.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-5 mb-5">
+        <div class="row mx-0 px-0 text-center">
+            <div class="col-md-6 text-center" data-aos="fade-right" data-aos="fade-down" data-aos-easing="linear"
+                data-aos-duration="1500">
+                <h2 style="color: orangered;margin-top: 30px;">Verified and trained drivers</h2>
+                <p>Travel worry-free anytime,anywhere with our advanced safety features and comprehensive driver
+                    training
+                    programs.Share your real-time location automatically.</p>
+            </div>
+
+            <div class="col-md-6" data-aos="fade-left" data-aos-easing="linear" data-aos-duration="1500">
+                <img src="img/driver training.jpeg" alt="" height="280px" width="100%" style="border-radius: 30px;">
+            </div>
+
+        </div>
+    </div>
+
+    <div class="container mt-5 mb-5">
+        <div class="row mx-0 px-0">
+            <div class="col-md-6" data-aos="fade-right" data-aos="fade-down" data-aos-easing="linear"
+                data-aos-duration="1500">>
+                <img src="img/customer services.jpeg" alt="" height="250px" width="100%" style="border-radius: 30px;">
+            </div>
+
+            <div class="col-md-6 text-center" data-aos="fade-left" data-aos-easing="linear" data-aos-duration="1500">
+                <h2 style="color: orangered; margin-top: 30px;">24/7 helpline support</h2>
+                <p>Yanggooo's 24/7 helpline support ensures that help is always available whenever I need it. Whether
+                    it's resolving a query or addressing a concern,
+                    their round-the-clock service gives me peace of mind knowing I can rely on them at any hour."</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-5 mb-5">
+        <div class="row mx-0 px-0">
+            <div class="col-md-6 text-center" data-aos="fade-right" data-aos="fade-down" data-aos-easing="linear"
+                data-aos-duration="1500">
+                <h2 style="color: orangered; margin-top: 30px;">Partner with Yaari Ride</h2>
+                <p>Applying to be a Yaari Ride partner is simple. Watching the Yaari Ride Partner website
+                    or visit the nearest Yaari Ride
+                    Franchise to register. For more details visit the Yaari Ride Partner Page.</p>
+            </div>
+
+            <div class="col-md-6">
+                <img src="img/partner.jpeg" alt="" height="250px" width="100%" style="border-radius: 30px;"
+                    data-aos="fade-left" data-aos-easing="linear" data-aos-duration="1500">
+            </div>
+
+        </div>
+    </div>
+    <!-- services -->
+
+    <!-- FAQS -->
+    <div class="container mt-5 mb-5">
+        <div class="row mx-0 px-0">
+            <div class="col-md-6">
+                <img src="img/question.gif" alt="" height="500px" width="100%">
+            </div>
+
+            <div class="col-md-6">
+                <h5 style="color: slategrey;">WHY CHOOSE YAARI RIDE??</h5>
+                <h2>We prioritize your safety</h2>
+                <p style="font-weight: 600;">All of our partners are tracked and undergo a thorough
+                    background check to guarantee your safety.</p>
+                <br>
+                <h2>Maintain high quality standards</h2>
+                <p style="font-weight: 600;">Your ratings and feedback help
+                    us ensure that you get the best experience with Yaari Ride every time.</p>
+                <br>
+                <h2>Provide transparent pricing</h2>
+                <p style="font-weight: 600;">Our charges have no hidden-costs,
+                    we ensure to list down all charges per service used.</p>
+                <br>
+                <a class="btn-24  btn" href="FAQs.html">Read More</a>
+            </div>
+        </div>
+    </div>
+    <!-- FAQS -->
+
+    <!-- slider -->
+    <!-- <div class="container">
+        <div id="carouselExample" class="carousel slide">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="img/slider1.jpeg" height="600px" width="100%" class="d-block w-100" alt="" style="border-radius: 35px;">
+                </div>
+                <div class="carousel-item">
+                    <img src="img/slider2 (2).jpeg" height="600px" width="100%" class="d-block w-100" alt="" style="border-radius: 35px;">
+                </div>
+                <div class="carousel-item">
+                    <img src="img/easy&comfort.jpeg" height="600px" width="100%" class="d-block w-100" alt="" style="border-radius: 35px;">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+    </div> -->
+
+    <div style="background-color:lightsalmon;border-radius: 60px;" class="mt-5 mb-5">
+        <div class="container">
+            <div class="box-area">
+                <div class="box active">
+                    <img src="img/slider1.jpeg" alt="img">
+                    <i class="fa-solid fa-car"></i>
+                    <h2>COMMUTE FROM PICK-UP TO DESTINATION.</h2>
+                    <p>
+
+                    </p>
+                </div>
+                <div class="box">
+                    <img src="img/slider5.jpeg" alt="img">
+                    <i class="fa-solid fa-car"></i>
+                    <h2>PAY LESS RIDE SMART</h2>
+                    <p>
+
+                    </p>
+                </div>
+                <div class="box">
+                    <img src="img/slider6.jpeg" alt="img">
+                    <i class="fa-solid fa-car"></i>
+                    <h2>DRIVING UP YOUR EXPECTATION</h2>
+                    <p>
+
+                    </p>
+                </div>
+                <div class="box">
+                    <img src="img/slider4.jpeg" alt="img">
+                    <i class="fa-solid fa-car"></i>
+                    <h2>SAFE AND SECURE RIDES</h2>
+                    <p>
+
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- <div class="container"
+            style="width: 100%; height: 100vh; display: flex; justify-content: center; align-items: center;">
+            <div class="box-area"
+                style="width: 100%; height: 100vh; display: flex; justify-content: center; align-items: center;">
+                <div class="box active"
+                    style="width: 500px; height: 400px; margin-right: 20px; overflow: hidden; border-radius: 20px; position: relative; transition: all linear 0.6s;">
+                    <img src="img/slider1.jpeg" alt="img" style="width: 100%; height: 100%; object-fit: cover;">
+                    <i class="fa-solid fa-car"
+                        style="width: 40px; height: 40px; border-radius: 50%; text-align: center; line-height: 40px; background: #fff; position: absolute; bottom: 20px; left: 10px; font-size: 20px; color: #ff5200;"></i>
+                    <h2
+                        style="position: absolute; bottom: 30px; left: 60px; font-family: 'Poppins', sans-serif; font-size: 25px; color: #f6f6f6; font-weight: 600; opacity: 1; transition: all linear 0.3s;">
+                        COMMUTE FROM PICK-UP TO DESTINATION.</h2>
+                    <p
+                        style="position: absolute; bottom: 10px; left: 60px; font-family: 'Poppins', sans-serif; font-size: 18px; font-weight: 400; color: #f6f6f6; opacity: 0; transition: all linear 0.3s;">
+                    </p>
+                </div>
+                <div class="box"
+                    style="width: 70px; height: 400px; margin-right: 20px; overflow: hidden; border-radius: 20px; position: relative; transition: all linear 0.6s;">
+                    <img src="img/slider5.jpeg" alt="img" style="width: 100%; height: 100%; object-fit: cover;">
+                    <i class="fa-solid fa-car"
+                        style="width: 40px; height: 40px; border-radius: 50%; text-align: center; line-height: 40px; background: #fff; position: absolute; bottom: 20px; left: 10px; font-size: 20px; color: #ff5200;"></i>
+                    <h2
+                        style="position: absolute; bottom: 30px; left: 60px; font-family: 'Poppins', sans-serif; font-size: 25px; color: #f6f6f6; font-weight: 600; opacity: 0; transition: all linear 0.3s;">
+                        PAY LESS RIDE SMART</h2>
+                    <p
+                        style="position: absolute; bottom: 10px; left: 60px; font-family: 'Poppins', sans-serif; font-size: 18px; font-weight: 400; color: #f6f6f6; opacity: 0; transition: all linear 0.3s;">
+                    </p>
+                </div>
+                <div class="box"
+                    style="width: 70px; height: 400px; margin-right: 20px; overflow: hidden; border-radius: 20px; position: relative; transition: all linear 0.6s;">
+                    <img src="img/slider6.jpeg" alt="img" style="width: 100%; height: 100%; object-fit: cover;">
+                    <i class="fa-solid fa-car"
+                        style="width: 40px; height: 40px; border-radius: 50%; text-align: center; line-height: 40px; background: #fff; position: absolute; bottom: 20px; left: 10px; font-size: 20px; color: #ff5200;"></i>
+                    <h2
+                        style="position: absolute; bottom: 30px; left: 60px; font-family: 'Poppins', sans-serif; font-size: 25px; color: #f6f6f6; font-weight: 600; opacity: 0; transition: all linear 0.3s;">
+                        PAY LESS RIDE SMART</h2>
+                    <p
+                        style="position: absolute; bottom: 10px; left: 60px; font-family: 'Poppins', sans-serif; font-size: 18px; font-weight: 400; color: #f6f6f6; opacity: 0; transition: all linear 0.3s;">
+                    </p>
+                </div>
+                <div class="box"
+                    style="width: 70px; height: 400px; margin-right: 20px; overflow: hidden; border-radius: 20px; position: relative; transition: all linear 0.6s;">
+                    <img src="img/slider4.jpeg" alt="img" style="width: 100%; height: 100%; object-fit: cover;">
+                    <i class="fa-solid fa-car"
+                        style="width: 40px; height: 40px; border-radius: 50%; text-align: center; line-height: 40px; background: #fff; position: absolute; bottom: 20px; left: 10px; font-size: 20px; color: #ff5200;"></i>
+                    <h2
+                        style="position: absolute; bottom: 30px; left: 60px; font-family: 'Poppins', sans-serif; font-size: 25px; color: #f6f6f6; font-weight: 600; opacity: 0; transition: all linear 0.3s;">
+                        PAY LESS RIDE SMART</h2>
+                    <p
+                        style="position: absolute; bottom: 10px; left: 60px; font-family: 'Poppins', sans-serif; font-size: 18px; font-weight: 400; color: #f6f6f6; opacity: 0; transition: all linear 0.3s;">
+                    </p>
+                </div>
+            </div>
+        </div> -->
+
+    </div>
+
+    <!-- <div class="signature">
+        <a href="http://accuratetheme.com/">Developed By Accurate Theme</a>
+    </div> -->
+
+    <!-- slider---->
+
+    <!-- feedback -->
+    <div class="container mt-5">
+        <h5 class="mt-4 mb-4" style="color: slategrey;">CUSTOMERS SHARE THEIR EXPERIENCES</h5>
+        <h3 class="mt-4">A community full of stories</h3>
+
+        <div class="col-md-6">
+            <img src="img/feedback.png" height="350px" width="100%" alt="">
+        </div>
+
+
+        <div class="container mt-5 mb-5">
+            <div class="feedback-container">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="feedback-card" data-aos="flip-right">
+                            <img src="img/feedbackmale-removebg-preview.png" height="100px" width="100px" alt="">
+                            <div>
+                                <h4>Kashif Q.</h4>
+                                <p>“I had a fantastic experience with Yaari Ride! This website was very user-friendly,
+                                    and I was impressed. My driver, Ahmed, was punctual, polite. Next time i will
+                                    definitely use Yaari Ride again. Keep up the great work!”​</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="col-sm-4">
+                        <div class="feedback-card" data-aos="flip-right">
+                            <img src="img/feedbackfemale-removebg-preview.png" height="100px" width="100px" alt="">
+                            <div>
+                                <h4>Shabia Ahmed.</h4>
+                                <p>“Using YAARI RIDE has been a game-changer for me as a woman in Pakistan. This sense
+                                    of
+                                    security and empowerment. The service quality has been consistently good too!”​</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4">
+                        <div class="feedback-card" data-aos="flip-right">
+                            <img src="img/feedbackmale-removebg-preview.png" height="100px" width="100px" alt="">
+                            <div>
+                                <h4>Zubair A.</h4>
+                                <p>“Excellent bike riding website with easy-to-understand navigations for tracking your
+                                    rider on
+                                    the app. Affordable travel cost for two-wheelers with friendly riders. Wish all the
+                                    best
+                                    of
+                                    luck!”​</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="feedback-container">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="feedback-card" data-aos="flip-right">
+                            <img src="img/feedbackfemale-removebg-preview.png" height="100px" width="100px" alt="">
+                            <div>
+                                <h4>Tooba Nadeem.</h4>
+                                <p>“I love how easy it is to book a Yaari Ride! This website is straightforward, and the
+                                    drivers
+                                    are always polite and professional.”​</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4">
+                        <div class="feedback-card" data-aos="flip-right">
+                            <img src="img/feedbackmale-removebg-preview.png" height="100px" width="100px" alt="">
+                            <div>
+                                <h4>Anas Zahid.</h4>
+                                <p>“Yaari Ride saved my day! Managed to catch my flight on time thanks to a quick and
+                                    reliable
+                                    ride. Definitely recommend it for anyone needing reliable transportation.”​</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- feedback -->
+
+
+    <!-- footer -->
+    <footer class="footer-section mt-5">
+        <div class="container">
+            <div class="footer-cta pt-5 pb-5">
+                <div class="row">
+                    <div class="col-xl-4 col-md-4 mb-30">
+                        <div class="single-cta">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div class="cta-text">
+                                <h4>Find us</h4>
+                                <span>1010 Avenue, sector 54321, PECHS</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-md-4 mb-30">
+                        <div class="single-cta">
+                            <i class="fas fa-phone"></i>
+                            <div class="cta-text">
+                                <h4>Call us</h4>
+                                <span>123-456-7890</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-md-4 mb-30">
+                        <div class="single-cta">
+                            <i class="far fa-envelope-open"></i>
+                            <div class="cta-text">
+                                <h4>Mail us</h4>
+                                <span>Yaari Ride@gmail.com</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-content pt-5 pb-5">
+                <div class="row">
+                    <div class="col-xl-4 col-lg-4 mb-50">
+                        <div class="footer-widget">
+                            <div class="footer-logo">
+                                <h1 style="color: white;">Yaari Ride</h1>
+                            </div>
+                            <div class="footer-text">
+                                <p>Welcome to Yaari Ride, Yaari Ride offers rides on motorbikes, rickshaws, and cars at
+                                    the lowest fares in Karachi. No matter what your destination is, Yaari Ride is
+                                    always there for you. Let’s get moving..</p>
+                            </div>
+                            <div class="footer-social-icon">
+                                <span>Follow us</span>
+                                <a href="#"><i class="fab fa-facebook-f facebook-bg"></i></a>
+                                <a href="#"><i class="fab fa-twitter twitter-bg"></i></a>
+                                <a href="#"><i class="fab fa-google-plus-g google-bg"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
+                        <div class="footer-widget">
+                            <div class="footer-widget-heading">
+                                <h3>Useful Links</h3>
+                            </div>
+                            <ul>
+                                <li><a href="home.html">Home</a></li>
+                                <li><a href="about.html">About</a></li>
+                                <li><a href="needMechanic.html"> Need A Mechanic</a></li>
+                                <li><a href="loginform.html">Login Form </a></li>
+                                <li><a href="MechanicConfirmation.html">Confirm Mechanic</a></li>
+                                <li><a href="ridesharing.html">Shared Ride</a></li>
+                                <li><a href="contact.html">Contact us</a></li>
+                                <li><a href="rideconfirmation.html">Confirm Ride</a></li>
+                                <li><a href="FAQs.html">FAQs</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
+                        <div class="footer-widget">
+                            <div class="footer-widget-heading">
+                                <h3>Subscribe</h3>
+                            </div>
+                            <div class="footer-text mb-25">
+                                <p>Don’t miss to subscribe to our new feeds, kindly fill the form below.</p>
+                            </div>
+                            <div class="subscribe-form">
+                                <form action="#">
+                                    <input type="text" placeholder="Email Address">
+                                    <button><i class="fab fa-telegram-plane"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright-area text-center">
+            <div class="container text-center">
+                <div class="row text-center">
+                    <center>
+                        <div class="col-xl-6 col-lg-6 text-center text-lg-center">
+                            <div class="copyright-text text-center">
+                                <p>Copyright &copy; 2024, All Right Reserved Yaari Ride <a href="https://codepen.io/anupkumar92/"></a>
+                                </p>
+                            </div>
+                        </div>
+                    </center>
+                    <div class="col-xl-6 col-lg-6 d-none d-lg-block text-right">
+                        <div class="footer-menu">
+                            <ul>
+                                <!-- <li><a href="#">Home</a></li>
+                                <li><a href="#">About</a></li>
+                                <li><a href="#">Ride</a></li>
+                                <li><a href="#">Mechanic</a></li> -->
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer -->
+
+</body>
+<script src="js/bootstrap.bundle.js"></script>
+<script src="js/jquery-3.7.1.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="js/script.js"></script>
+<script src="js/style.js"></script>
+<script src="js/preloader.js"></script>
+<script>
+    AOS.init();
+
+</script>
+
+</html>
